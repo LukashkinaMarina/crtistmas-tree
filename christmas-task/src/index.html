@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@15.5.0/dist/nouislider.min.css" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Christmas Tree</title>
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.5.0/dist/nouislider.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <a class="logo"></a>
+      <nav class="nav-toys">
+        <div class="nav-button">
+          <div class="nav-toy">Игрушки</div>
+          <div class="spruce">Елка</div>
+          <div class="search-container">
+            <input type="search" id="site-search" placeholder="Поиск по имени" autocomplete="off">
+            <div class="favorite-counter"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="global-page">
+    <main>
+      <div class="control-panel">
+        <div class="value-filter">
+          <h3>ФИЛЬТРЫ ПО ЗНАЧЕНИЮ</h3>
+          <div class="filter-shape">Форма:
+            <div class="filter-shape-item circle">
+              <label>
+                <input id="circle-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-shape-item bell">
+              <label>
+                <input id="bell-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-shape-item cone">
+              <label>
+                <input id="cone-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-shape-item snowflake">
+              <label>
+                <input id="snowflake-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-shape-item bear">
+              <label>
+                <input id="bear-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+          </div>
+          <div class="filter-color">Цвет:
+            <div class="filter-color-item white">
+              <label>
+                <input id="white-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-color-item yellow">
+              <label>
+                <input id="yellow-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-color-item red">
+              <label>
+                <input id="red-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-color-item blue">
+              <label>
+                <input id="blue-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-color-item green">
+              <label>
+                <input id="green-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+          </div>
+          <div class="filter-size">Размер:
+            <div class="filter-size-item big">
+              <label>
+                <input id="big-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-size-item middle">
+              <label>
+                <input id="middle-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div class="filter-size-item little">
+              <label>
+                <input id="little-checkbox" class="shape-input" type="checkbox">
+              </label>
+            </div>
+            <div style="width: 120px;">
+            </div>
+          </div>
+          <div class="filter-favorite">Только любимые:
+            <input id="filter-checkbox" type="checkbox">
+          </div>
+        </div>
+        <div class="range-filter">
+          <h3>ФИЛЬТРЫ ПО ДИАПАЗОНУ</h3>
+          <p>Количество экземпляров</p>
+          <div class="range-two-slider">
+            <div class="range-point quantity-toys-min"></div>
+            <div class="quantity-toys"></div>
+            <div class="range-point quantity-toys-max"></div>
+          </div>
+          <p>Год приобретения</p>
+          <div class="range-two-slider">
+            <div class="range-point year-toys-min"></div>
+            <div class="year-toys"></div>
+            <div class="range-point year-toys-max"></div>
+          </div>
+        </div>
+        <div class="sorting-filter">
+          <h3>СОРТИРОВКА</h3>
+          <div>
+            <select class="sorting-type">
+              <option value="az">По названию от А до Я</option>
+              <option value="za">По названию от Я до А</option>
+              <option value="increase">По количеству по возрастанию</option>
+              <option value="decrease">По количеству по убыванию</option>
+              <option value="year-inc">По году по возрастанию</option>
+              <option value="year-dec">По году по убыванию</option>
+              <option value="size-inc">По размеру по возрастанию</option>
+              <option value="size-dec">По размеру по убыванию</option>
+            </select>
+          </div>
+          <button class="reset-filters">сброс фильтров</button>
+        </div>
+      </div>
+      <div class="spruce-screen">
+        <div class="content-spruce-screen">
+          <div class="menu-trees">
+            <div class="control-buttons">
+              <button class="sound-button button-selected">музыка</button>
+              <button class="reset-tree">сбросить</button>
+              <button class="random-tree">сгенерировать елку</button>
+              <button class="snowflake-button">снег</button>
+            </div>
+            <audio id="audio-id"
+              src="https://github.com/LukashkinaMarina/chritmas-task-assests/raw/main/assets/audio/audio.mp3"></audio>
+            <p>ВЫБЕРИТЕ ЕЛКУ</p>
+            <div class="choice-tree">
+              <div id="sp1" class="first-spruce"></div>
+              <div id="sp2" class="second-spruce"></div>
+              <div id="sp3" class="third-spruce"></div>
+              <div id="sp4" class="fourth-spruce"></div>
+              <div id="sp5" class="fifth-spruce"></div>
+              <div id="sp6" class="sixth-spruce"></div>
+            </div>
+            <p>ВЫБЕРИТЕ ФОН</p>
+            <div class="menu-background">
+              <div id="bg1" class="first-background"></div>
+              <div id="bg2" class="second-background"></div>
+              <div id="bg3" class="third-background"></div>
+              <div id="bg4" class="fourth-background"></div>
+              <div id="bg5" class="fifth-background"></div>
+              <div id="bg6" class="sixth-background"></div>
+              <div id="bg7" class="seventh-background"></div>
+              <div id="bg8" class="eighth-background"></div>
+              <div id="bg9" class="ninth-background"></div>
+              <div id="bg10" class="tenth-background"></div>
+            </div>
+            <p>ВЫБЕРИТЕ ГИРЛЯНДУ</p>
+            <div class="garland-color-buttons">
+              <button class="garland-multicolor"></button>
+              <button class="garland-red"></button>
+              <button class="garland-blue"></button>
+              <button class="garland-yellow"></button>
+              <button class="garland-green"></button>
+              <button class="garland-off">выкл</button>
+            </div>
+          </div>
+          <div class="decoration-spruce">
+            <div class="main-spruce"></div>
+            <div class="canvas-container">
+              <canvas id="canvas" width="700" height="700"></canvas>
+            </div>
+            <div class="background-main-spruce">
+              <div class="snowflakes">
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+                <div class="snowflake"></div>
+              </div>
+            </div>
+          </div>
+          <div class="spruce-toys"></div>
+        </div>
+      </div>
+    </main>
+    <template id="spruceToyTemp">
+      <div class="spruce-toy">
+        <img class="spruce-toy-img" draggable="true" src="" alt="toy">
+        <div class="spruce-toy-count"></div>
+      </div>
+    </template>
+    <template id="toysItemTemp">
+      <div class="toy">
+        <div class="close">✗</div>
+        <img class="toy-img" src="" alt="toy">
+        <span class="toy-name"></span>
+        <span class="toy-count"></span>
+        <span class="toy-year"></span>
+        <span class="toy-shape"></span>
+        <span class="toy-color"></span>
+        <span class="toy-size"></span>
+        <span class="toy-favorite"></span>
+        <button class="download">скачать картинку</button>
+        <div class="arrow">
+          <div class="arrow-middle"></div>
+          <div class="arrow-end"></div>
+          <input class="arrow-checkbox" type="checkbox">
+        </div>
+      </div>
+  </div>
+  </template>
+  <div class="toys"></div>
+  <div style="height: 100px;"></div>
+  <footer>
+    <span>2021</span>
+    <a href="https://github.com/LukashkinaMarina" target="_blank" title="Marina Lukashkina's github repository">Marina
+      Lukashkina</a>
+    <a class="footer-link-to-school" href="https://rs.school/js/" target="_blank"
+      title="Click link to open Rolling Scopes School website"><img class="footer-logo"
+        src="https://rs.school/images/rs_school.svg" alt="Rolling Scopes School Logo" width="83" height="30">Rolling
+      Scopes
+      School</a>
+  </footer>
+  <div class="favorite-caption">Извините, все слоты заполнены</div>
+  <div class="no-items-container">
+    <div class="no-items">
+      Извините, совпадений не обнаружено</div>
+  </div>
+  <div class="start-caption">
+    <div>новогодняя игра <br> "Помогите бабушке <br>нарядить ёлку"</div>
+    <div>
+      <button class="start-game">Начать</button>
+    </div>
+  </div>
+</body>
+
+</html>

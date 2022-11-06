@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "experimentalDecorators": true,
+    "checkJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2019", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "skipLibCheck": true,
+    "target": "es5",
+    "types": ["node", "webpack-env"],
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "~": ["./src"]
+    }
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/index.ts"],
+  "exclude": ["node_modules", "src/**/*.js", "src/**/*.jsx"]
+}

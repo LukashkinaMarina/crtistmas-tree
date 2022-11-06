@@ -1,0 +1,904 @@
+body {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  background: #555;
+  overflow-x: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/main/assets/bg.jpg);
+}
+
+header {
+  position: relative;
+  background-color: rgba(19, 52, 58, 0.6);
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+footer {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer .copyright {
+  font-size: 1em;
+  text-align: center;
+}
+
+
+footer .copyright:before {
+  content: '©';
+}
+
+footer a {
+  color: white;
+}
+
+
+.header-content {
+  display: flex;
+  width: 100vw;
+  max-width: 1600px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button,
+select,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.nav-toy,
+.spruce {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  margin: 0px, 20px;
+}
+
+.control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 100vw;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.value-filter,
+.range-filter,
+.sorting-filter {
+  min-width: 400px;
+  width: calc(33% - 80px);
+  height: 320px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid #278D9F;
+  background-color: rgba(31, 112, 127, .3);
+  backdrop-filter: blur(6px);
+}
+
+#site-search {
+  width: 380px;
+  height: 40px;
+  padding: 5px 25px;
+  margin: 10px 0;
+  border: 1px solid #278D9F;
+  color: #fff;
+  font-size: 18px;
+  background-color: rgba(31, 112, 127, .3);
+  background-size: 20px;
+
+}
+
+.global-page {
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer {
+  background-color: rgba(19, 52, 58, 0.6);
+}
+
+.quantity-toys,
+.year-toys {
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 15px;
+}
+
+.range-two-slider {
+  width: 100%;
+  display: flex;
+}
+
+.range-point {
+  display: flex;
+  width: 32px;
+  height: 28px;
+  justify-content: center;
+  align-items: end;
+  padding: 10px;
+  border-radius: 28px;
+  border: 1px solid #278D9F;
+  background-color: rgba(31, 112, 127, .3);
+}
+
+.shape-input {
+  display: none;
+}
+
+.filter-size-item,
+.filter-shape-item,
+.filter-color-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-shape,
+.filter-size,
+.filter-color {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 60px;
+}
+
+.filter-selected {
+  opacity: 0.4;
+}
+
+.filter-color-item {
+  border-radius: 6px;
+}
+
+.filter-color-item label {
+  padding: 12px;
+}
+
+.filter-shape-item label {
+  padding: 10px;
+}
+
+.filter-size-item label {
+  padding: 20px;
+}
+
+.favorite-caption {
+  display: none;
+  position: fixed;
+  width: 300px;
+  top: 30%;
+  left: calc(50% - 150px);
+  padding: 40px;
+  border-radius: 6px;
+  border: 1px solid #278D9F;
+  background-color: rgba(31, 112, 127, .9);
+}
+
+
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+header,
+.toys,
+main {
+  display: none;
+}
+
+.start-caption {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 80px;
+  position: fixed;
+  width: 660px;
+  height: 500px;
+  top: calc(50% - 330px);
+  left: calc(50% - 370px);
+  padding: 40px;
+  border-radius: 6px;
+  border: 1px solid #278D9F;
+  text-transform: uppercase;
+  font-size: 60px;
+  background-color: rgba(31, 112, 127, .9);
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.favorite-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  color: white;
+  border: 3px solid white;
+  margin-left: 10px;
+  background-color: rgba(31, 112, 127, .9);
+  border-radius: 50%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 90px;
+}
+
+.bear,
+.snowflake,
+.cone,
+.bell,
+.circle,
+.big,
+.middle,
+.little {
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 44px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+
+}
+
+.bear {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/toy.svg);
+}
+
+.snowflake {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/snowflake.svg);
+}
+
+.cone {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/cone.svg);
+}
+
+.bell {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/bell.svg);
+}
+
+.circle {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/ball.svg);
+}
+
+.filter-color>button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 15px 10px;
+  border: 1px solid #278D9F;
+  border-radius: 5px;
+  outline: 0;
+  background-color: transparent;
+
+}
+
+.filter-color>.white {
+  background-color: #fff;
+}
+
+
+.filter-color>.yellow {
+  background-color: #FDD700;
+}
+
+.filter-color>.red {
+  background-color: #FD0000;
+}
+
+.filter-color>.blue {
+  background-color: #2199EB;
+}
+
+.filter-color>.green {
+  background-color: #08AA05;
+}
+
+.big,
+.middle,
+.little {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/ball.svg);
+}
+
+.big {
+  height: 42px;
+  width: 42px;
+  background-size: 42px;
+}
+
+.middle {
+  height: 32px;
+  width: 32px;
+  background-size: 32px;
+}
+
+.little {
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
+}
+
+
+.bear:hover {
+  filter: sepia();
+}
+
+.logo {
+  width: 48px;
+  height: 60px;
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/tree.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#site-search {
+  width: 380px;
+  height: 40px;
+  padding: 5px 25px;
+  border: 1px solid #278D9F;
+  color: #fff;
+  font-size: 18px;
+  background-color: rgba(31, 112, 127, .3);
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/search.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 330px center;
+  backdrop-filter: blur(6px);
+}
+
+.sorting-type {
+  padding: 10px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid #278D9F;
+}
+
+.sorting-type option {
+  color: white;
+  background-color: rgb(21, 59, 66);
+}
+
+.reset-filters,
+.start-game,
+.download {
+  margin-top: 16px;
+  padding: 10px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid white;
+}
+
+.no-items {
+  padding: 60px;
+  align-self: flex-start;
+  background-color: rgba(31, 112, 127, .3);
+  border: 1px solid #278D9F;
+  border-radius: 6px;
+}
+
+.no-items-container {
+  display: none;
+  justify-content: center;
+  height: 40vh;
+  align-items: center;
+}
+
+
+.spruce:hover {
+  color: rgba(31, 112, 127, .9);
+}
+
+.nav-toy:hover {
+  color: rgba(31, 112, 127, .9);
+}
+
+.audio {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/d3cbbbeb3207b1a90bdb2c1ba5bb27a6492744f5/assets/svg/audio.svg);
+}
+
+.snowflakes {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/d3cbbbeb3207b1a90bdb2c1ba5bb27a6492744f5/assets/svg/snowflake.svg);
+}
+
+.audio,
+.snowflake {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.first-spruce {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/1.png);
+}
+
+.choice-tree>div {
+  width: 115px;
+  height: 115px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  background-size: auto 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+
+.second-spruce {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/2.png);
+}
+
+.third-spruce {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/3.png);
+}
+
+.fourth-spruce {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/4.png);
+}
+
+.fifth-spruce {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/5.png);
+}
+
+.sixth-spruce {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/tree/6.png);
+}
+
+
+.menu-background>div {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #cccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.first-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/1.jpg);
+}
+
+.second-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/2.jpg);
+}
+
+.third-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/3.jpg);
+}
+
+.fourth-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/4.jpg);
+}
+
+.fifth-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/5.jpg);
+}
+
+.sixth-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/6.jpg);
+}
+
+.seventh-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/7.jpg);
+}
+
+.eighth-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/8.jpg);
+}
+
+.ninth-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/9.jpg);
+}
+
+.tenth-background {
+  background-image: url(https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/christmas-task/assets/bg/10.jpg);
+}
+
+.audio-and-snowflake {
+  display: flex;
+  width: 400px;
+  height: 40px;
+}
+
+.choice-tree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 400px;
+  height: 300px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.menu-background {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 400px;
+  height: 180px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.nav-toy,
+.logo,
+.spruce {
+  cursor: pointer;
+}
+
+.garland-color-buttons {
+  display: flex;
+  width: 365px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.garland-color-buttons>button {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.garland-multicolor {
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #441313 0 -1px 9px, #ccc 0 2px 12px;
+}
+
+.garland-red {
+  background-color: #F00;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgb(255 0 0 / 50%) 0 2px 12px;
+}
+
+.garland-blue {
+  background-color: #24E0FF;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3f8cff 0 2px 14px;
+}
+
+.garland-yellow {
+  background-color: #FF0;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
+}
+
+.garland-green {
+  background-color: #ABFF00;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89ff00 0 2px 12px;
+}
+
+.background-main-spruce {
+  width: 700px;
+  height: 750px;
+  margin: 0;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-spruce {
+  width: 500px;
+  left: 15%;
+  height: 715px;
+  transform: scale(0.9);
+  position: absolute;
+  z-index: 1;
+}
+
+.decoration-spruce {
+  position: relative;
+}
+
+.spruce-toy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  max-width: 84px;
+  min-height: 84px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.spruce-toys {
+  display: none;
+  align-content: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+
+}
+
+button.filter-selected {
+  background-color: transparent;
+  color: gray;
+  border: 2px solid gray;
+  border-radius: 6px;
+
+}
+
+.snowflake {
+  color: white;
+  font-size: 1em;
+  text-shadow: 0 0 3px #000;
+  width: 250vw;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+@-webkit-keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px)
+  }
+
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px)
+  }
+
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px)
+  }
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px)
+  }
+
+  50% {
+    transform: translateX(80px)
+  }
+
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+.snowflake {
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+  left: 30%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+  left: 20%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+  left: 30%;
+  -webkit-animation-delay: 6s, .5s;
+  animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+  left: 20%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+  left: 30%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+  left: 30%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+  left: 30%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+  left: 40%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+  left: 40%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s
+}
+
+.snowflakes {
+  display: block;
+}
+
+.snowflakes-toys {
+  background-image: url(https://raw.githubusercontent.com/LukashkinaMarina/chritmas-task-assests/9f2475a2df9961f5aa0f4fe7b2bcba63fd6f840f/assets/svg/snow.svg);
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.garland-off {
+  width: 100px !important;
+  border-radius: 5px !important;
+}
+
+.spruce-toy {
+  position: relative;
+  height: 84px;
+  width: 84px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.spruce-toy-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  padding: 6px;
+  border-radius: 50%;
+  font-weight: 600;
+  background-color: #2199EB;
+  color: white;
+}
+
+.spruce-toy-img {
+  height: 60px;
+  width: 60px;
+}
+
+.spruce-toys {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-spruce-screen {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.spruce-screen {
+  display: none;
+  width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-container {
+  position: relative;
+}
+
+.canvas-container canvas {
+  position: absolute;
+  z-index: 10;
+}
+
+.button-selected {
+  border-color: 2px solid gray !important;
+  opacity: 0.8 !important;
+}
+
+.control-buttons {
+  width: 365px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
